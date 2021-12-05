@@ -1,0 +1,11 @@
+version: '3'
+services:
+  ms-mailer-db:
+    container_name: ms-mailer-db
+    image: postgres:13.4-alpine
+    environment:
+      - 'POSTGRES_DB=ms-mailer'
+      - 'POSTGRES_USER=root'
+      - 'POSTGRES_PASSWORD=root'
+    ports:
+      - '5432:5432'
